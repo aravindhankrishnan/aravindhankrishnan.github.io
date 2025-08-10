@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="">
+<meta name="keywords" content="robotics, perception, aravindhan k krishnan, arizona state university">
+<meta name="Aravindhan K Krishnan" content="Aravindhan K Krishnan">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+<title>Aravindhan K Krishnan</title>
+</head>
+<body>
+
+
+<div id="centerColumn">
+	<div id="header">
+	 <img align="left" src="me.jpg" width="230" height="180" hspace="20" >
+<h1>Aravindhan K Krishnan</h1>          
+	<h2>Robot Vision Researcher <br>
+                Ph.D. Exploration Systems Design </h2> 
+	  </div>
+	 
+	
+	<div id="nav">
+	<ul>
+	<li><a href="home.html" title="Home" class="nav">Home</a></li>
+	<li><a href="projects.html" title="Projects" class="nav">Projects</a></li>
+	<li><a href="publications.html" title="Publications" class="nav">Publications</a></li>
+	<li><a href="resume.html" title="Resume" class="nav">Resume</a></li>
+	<li><a href="code.html" title="Code" class="nav">Code</a></li>
+    <li><a href="writeups.html" title="Write ups" class="nav">Write ups</a></li>
+  </ul>
+	</div>
+<hr>
+<b> All these projects were done during my grad school. For info on more recent work, contact me on LinkedIn </b>
+<hr>
+
+<h4> Cross-calibration of RGB and Thermal cameras with a LIDAR</h4>
+<div>
+<p style="width:850px;"> <a> <img style="float: right; border: double; color: green;" src="cross-calibration.jpg" width="230" height="130" hspace="20"> </a>
+
+We are building a round-the-clock sensing system that gives textured 3D maps. The system consists of a RIEGL LMSQ240i-80 LIDAR which is tilted by a Robotis motor to give 
+3D point clouds, a Prosillica GT 1920C camera, a FLIR Tau 2 long wave infra red camera, and a Novatel SPAN-IGM GPS. The first step in getting textured maps from a LIDAR and a 
+camera is to find the extrinsics between the two sensors. We are interested in building a unified solution that can cross-calibrate both the color camera and the 
+thermal camera with the LIDAR. This is a work in progress. The details will be updated soon.
+
+</p>
+
+
+<p> Cross-Calibration of RGB and Thermal Cameras with a LIDAR for RGB-Depth-Thermal Mapping  <br> <u>Aravindhan K Krishnan</u> and Srikanth Saripalli <br> Unmanned Systems 2017 <a href="https://1drv.ms/b/s!ApBAk-YTZNwpqg7ZAHWW01UKcSUs", target="_blank"> pdf </a> 
+</p>
+
+<p>
+ Cross-Calibration of RGB and Thermal cameras with a LIDAR <br> <u>Aravindhan K Krishnan</u>, Benjamin Stinnett, and Srikanth Saripalli <br>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) Workshop on Alternative Sensing for Robot Perception, 2015 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!1735&authkey=!ADhYGH9mmywhCQY&ithint=file%2cpdf", target="_blank"> pdf </a>
+&nbsp;<a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!3376&authkey=!AN2n6vHZ6YvLrpA&ithint=file%2cpdf", target="_blank"> poster </a>
+</p>
+
+
+</div>
+
+<hr>
+
+
+
+<h4> 3D mapping using LIDAR</h4>
+<div>
+<p style="width:850px;"> <a> <img style="float: right; border: double; color: green;" src="puck.png" width="160" height="130" hspace="20"> </a>
+
+We used the Iterative Closest Point (ICP) algorithm to build a mapping pipeline that can construct 3D maps from LIDAR data. We tested the pipeline on Velodyne and RIEGL LIDARs. 
+</p>
+
+<p>
+The Velodyne LIDAR (VLP16) was mounted on a car and was driven around. GPS was NOT used. The setup and the maps along with the trajectory can be found <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!3930&authkey=!AL75kayICHR-XAo&ithint=folder%2cpng", target="_blank">here</a>. 
+</p>
+
+<!--
+<p>
+The RIEGL LIDAR (2D LIDAR) was tilted by a Dynamixel Pro motor to get 3D point clouds which were aligned using ICP to get a 3D map. The maps along with the trajectory can be found here. 
+</p>
+-->
+
+</div>
+
+<hr>
+
+
+
+
+
+
+
+
+
+<h4> Initial Alignment methods for Point Cloud Registration </h4>
+<div>
+<p style="width:850px;"> <img style="float: right; border: double; color: green;" src="initial-alignment.png" width="150" height="130" hspace="20"> 
+
+The objective of this project is to register two point clouds in the absence of a good initial estimate of the transformation between them. We approached the problem geometrically by finding 
+congruent structures in the two point clouds. The congruent structure we chose is a pyramid containing a quadrilateral base and an apex. We used the properties of a rigid body 
+transformation to find the congruent structures. Later, from the corresponding points of the congruent structures, we determine the initial estimate using SVD.
+
+</p>
+
+<p>
+ Point Cloud Registration Using Congruent Pyramids <br> <u>Aravindhan K Krishnan</u> and Srikanth Saripalli <br>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2014 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!311&authkey=!AM4w6zfIBjMhdyg&ithint=file%2cpdf", target="_blank"> pdf </a>
+</p>
+
+</div>
+
+<hr>
+
+
+<h4> Change Detection using Airborne LIDAR </h4>
+<div>
+<p style="width:850px;"> <img style="float: right; border: double; color: green;" src="airborne-lidar.jpg" width="150" height="130" hspace="20"> 
+
+In this project, we try to measure the local displacements on topographies caused by earthquakes. We use the pre-event and post-event point clouds obtained from airborne LIDAR.
+The local displacements are computed as the 6DOF transformation between the topographic segments before and after the earthquake. The approach was successfully tested on the 
+datasets of the El Mayor Cucupa earthquake in Mexico, 2010, and the Fukushima-Hamadori earthquake in Japan, 2011.
+</p>
+
+<p>
+Change detection using Airborne Systems : Applications to Earthquakes <br> <u>Aravindhan K Krishnan</u>, Edwin Nissen, Srikanth Saripalli and Ramon Arrowsmith.<br> International Symposium on Experimental Robotics (ISER) 2012 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!207&authkey=!AH2bVuu2NUooBzc&ithint=file%2cpdf", target="_blank">pdf</a> 
+<br>
+<br>
+
+Three-dimensional coseismic surface displacements and rotations from pre- and post-earthquake Lidar point clouds <br> Edwin Nissen, <u>Aravindhan K Krishnan</u>, Ramon Arrowsmith and Srikanth Saripalli<br> Geophysical Research Letters (GRL), 2012 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!225&authkey=!AA9Gx0vknjlCuRQ&ithint=file%2cpdf", target="_blank">pdf</a> 
+<br>
+<br>
+
+Coseismic fault zone deformation revealed with differential LiDAR: examples from Japanese Mw ~7 intraplate earthquakes  <br> Edwin Nissen, Tadashi Maruyama, J. Ramon Arrowsmith, John R. Elliott, <u>Aravindhan K Krishnan</u>, Michael E. Oskin, and Srikanth Saripalli<br> Earth and Planetary Science Letters  (EPSL) 2014<a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!249&authkey=!AL1e9X_8VE3uyoU&ithint=file%2cpdf", target="_blank">pdf</a>
+
+</p>
+
+</div>
+
+<hr>
+
+<h4> Low-cost Aerial Systems for Change Detection </h4>
+<div>
+<p style="width:850px;"> <img style="float: right; border: double; color: green;" src="low-cost-system.png" width="150" height="130" hspace="20"> 
+
+This is an extension of our previous project, where we explored the use of low-cost aerial systems like the autonomous kite (built in our lab) for change detection. We mounted a
+camera on the autonomous kite and collected images of topographies. Later, we built 3D maps from these images using Structure From Motion (SFM). To detect changes, the SFM point cloud was compared 
+with a point cloud obtained from airborne LIDAR. The main problem faced here is to globally register the SFM point cloud with the point cloud from the airborne LIDAR before one 
+can detect changes. We developed a semi-automated method that successfully registers the two point clouds.
+
+</p>
+
+<p>
+3D change detection using low cost aerial imagery <br> <u>Aravindhan K Krishnan</u>, Srikanth Saripalli, Edwin Nissen and Ramon Arrowsmith <br> IEEE International Symposium on Safety, Security and Rescue Robotics (SSRR), 2012 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!196&authkey=!AAQo1RIWFbhsO9o&ithint=file%2cpdf", target="_blank"> pdf </a> 
+</p>
+
+</div>
+
+<hr>
+
+
+
+<h4> System Development of a 'Visible - Near Infra Red' Multi-spectral Camera </h4>
+<div>
+<p style="width:850px;"> <img style="float: right; border: double; color: green;" src="nir-cam.jpg" width="150" height="130" hspace="20"> 
+
+We built a stereo 'Visible - Near Infra Red' multi-spectral camera that is analogous to the PanCam on the MER rovers. The camera consists of 6 filters across various spectral bands ranging from 450 nm to 1050 nm.
+The objective of the project is to use the camera for classifying rocks based on their spectral response in the visible-near infra red spectrum.  To avoid discrepancies due to 
+the non-linear response characteristics of the detector,
+we calibrated the detector to find the maximum acceptable pixel value for each spectrum. We also developed an auto exposure algorithm to avoid over-exposure of pixels, which in 
+turn can lead to an incorrect classification of minerals. The camera was tested successfully and delivered to the NASA Ames Research Center.
+
+</a>
+</p>
+
+<p>
+NIR-CAM : Development of a Near Infrared camera <br> <u>Aravindhan K Krishnan</u>, Patrick McGarey, Srikanth Saripalli and James F Bell<br>IEEE International Symposium on Robotic and Sensors Environments (ROSE), 2013 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!331&authkey=!AGdGFPHT9vzBzWI&ithint=file%2cpdf", target="_blank"> pdf </a> 
+</p>
+
+</div>
+
+<hr>
+
+<h4> Point Cloud Library (PCL) </h4>
+
+<div>
+<p style="width:850px;"> <img style="float: right; border: double; color: green;" src="pcl-logo.png" width="150" height="130" hspace="20">
+I participated in the PCL Trimble code sprint. I added new APIs to the PCL registration library. I added algorithms to the Correspondence Estimation and Correspondence Rejection 
+modules in the registration library. These modules were ported from the libpointmatcher library (from ETH Zurich). Additionally, I added the following algorithms to the 
+PCL filtering library
+: Frustrum Culling, ShadowPoints filter, SamplingSurfaceNormal filter, and NormalSpaceSampling filter. 
+</p>
+
+<p>
+This <a href="http://pointclouds.org/blog/trcs/krishnan/index.php", target="_blank">blogpost</a> details all my contributions to the PCL library.
+</p>
+</div>
+<br>
+
+<hr>
+
+
+
+
+<h4> Visual Exploration Algorithm Using Semantic Cues</h4>
+
+<div>
+<p style="width:850px;">  <img style="float: right; border: double; color: green;" src="p3dx.jpg" width="150" height="170" hspace="20"> 
+
+This is my Masters thesis project.  I worked on new exploration strategies for indoor robots that are specific to the semantic-construct (such as office, lab, corridor etc.) the robot is in. 
+I used the <b> Visual-Bag-Of-Words </b> framework to classify the images as an office room / a corridor / a lab etc. and 
+invoked a semantic-construct specific exploration strategy. The final map built is a topological map of nodes containing the places the robot visited and its associated images.
+
+
+</p>
+
+
+<p> A Visual Exploration Algorithm using Semantic Cues that Constructs Image based Hybrid Maps <br> <u>Aravindhan K Krishnan</u> and K Madhava Krishna. <br> IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2010 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!1666&authkey=!ANrIHW1nuV4o9KQ&ithint=file%2cpdf", target="_blank">pdf</a> 
+<br>
+<br>
+ Image Based Exploration for Indoor Environments using Local Features <br>  <u>Aravindhan K Krishnan</u>, K Madhava Krishna and Supreeth Achar. <br> Autonomous Agents and Multi Agent Systems (AAMAS) 2010 <a href="https://onedrive.live.com/redir?resid=29DC6413E6934090!1667&authkey=!AOptxE0ZbpKNH38&ithint=file%2cpdf", target="_blank">pdf</a> 
+</p>
+
+</div>
+
+
+
+<hr>
+
+</body></html>	

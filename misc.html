@@ -1,0 +1,44 @@
+<html>
+<body>
+
+<br>
+<br>
+
+<a href="cpp.html"> C++ </a>
+<br>
+<br>
+
+<hr>
+<p> <u> <b> Reducing size of a PDF file </b> </u> </p>
+Install ghostscript and run the following command
+<br>
+<br>
+gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -sOutputFile=new_file.pdf original_file.pdf
+<br>
+<br>
+Options for -dPDFSettings:
+<br>
+<br>
+<b> /screen </b> selects low-resolution output, and the lowest file-size. <br>
+<b> /ebook </b> selects medium-resolution output, with a medium file-size. <br>
+<b> /printer </b> and <b> /prepress </b> are both the high-resolution options, which is mainly used for printing PDFs.
+<br>
+<hr>
+
+<p> <u> <b> Video Format conversion </b> </u> </p>
+
+<p> Converting video files from one format to another <br>
+<b> ffmpeg -i movie.mov -f mp4 -vcodec copy -acodec copy output.mp4 </b>
+<br>
+Remove "-vcodec copy -acodec copy" in case of errors
+</p>
+
+<p> Converting video files from one format to another and <b> compress </b> <br>
+<b> ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4 </b> <br>
+Vary the crf parameter from 18 to 24 - the lower, the higher the bitrate
+</p>
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<body>
+
+<br>
+<br>
+
+<hr>
+<li> alignas specifier </li> <br>
+
+Aligning objects on a specified byte boundary.<br>
+<br>
+<a href="http://en.cppreference.com/w/cpp/language/alignas"> cppreference </a>
+<p>
+
+struct <b>alignas (16) </b> Employee { <br>
+ &nbsp;  uint8_t age; <br>
+ &nbsp;  double salary; <br>
+ &nbsp;  std::string name; <br>
+}; <br>
+
+</p>
+<hr>
+<br>
+
+<li> override specifier </li>
+<p>
+- Specifies that a virtual function is overriding another virtual function. Avoids accidental function overloading if the datatypes of parameters are changed by mistake. 
+For instance, using "double" for the overriding function parameter instead of "const double". Compiler throws an error when function signatures mismatch.
+<br>
+- Only for virtual functions
+<br>
+<br>
+<a href="http://en.cppreference.com/w/cpp/language/override"> cppreference </a>
+<br>
+<br>
+struct Engineer : public Employee { <br>
+ &nbsp; void computeLeavesTaken () <b> override </b>; <br>
+};<br>
+
+</p>
+
+<hr>
+
+<li> Overloading comma operator </li>
+<br>
+<a href="http://stackoverflow.com/questions/5602112/when-to-overload-the-comma-operator"> Stack Overflow </a>
+<br>
+
+<p>
+enum Place {new_york, washington, ...};
+<br>
+<br>
+pair<Place, Place> operator , (Place p1, Place p2) <br>
+{ <br>
+   &nbsp; return make_pair(p1, p2); <br>
+} <br>
+
+<br>
+map< pair<Place, Place>, double> distance; <br>
+<br>
+distance[new_york, washington] = 100; <br>
+</p>
+
+<br>
+
+<hr>
+</body>
+</html>	
